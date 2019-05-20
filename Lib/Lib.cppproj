@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>7.0</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8.CPP</ToolchainName>
+    <ProjectGuid>{d788574a-fb01-4e3c-b22c-d406af2b10bc}</ProjectGuid>
+    <avrdevice>ATmega328P</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>CPP</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>Lib</AssemblyName>
+    <Name>Lib</Name>
+    <RootNamespace>Lib</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress />
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue />
+    <BootSegment>2</BootSegment>
+    <ResetRule>0</ResetRule>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <EraseKey />
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+  <options />
+  <configurations />
+  <files />
+  <documentation help="" />
+  <offline-documentation help="" />
+  <dependencies>
+    <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.40.0" />
+  </dependencies>
+</framework-data>
+    </AsfFrameworkConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGccCpp>
+  <avrgcc.common.Device>-mmcu=atmega328p -B "%24(PackRepoDir)\Atmel\ATmega_DFP\1.2.272\gcc\dev\atmega328p"</avrgcc.common.Device>
+  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+  <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+  <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+  <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+  <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+  <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>NDEBUG</Value>
+    </ListValues>
+  </avrgcc.compiler.symbols.DefSymbols>
+  <avrgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\Atmel\ATmega_DFP\1.2.272\include</Value>
+    </ListValues>
+  </avrgcc.compiler.directories.IncludePaths>
+  <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+  <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+  <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+  <avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcccpp.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>NDEBUG</Value>
+    </ListValues>
+  </avrgcccpp.compiler.symbols.DefSymbols>
+  <avrgcccpp.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\Atmel\ATmega_DFP\1.2.272\include</Value>
+    </ListValues>
+  </avrgcccpp.compiler.directories.IncludePaths>
+  <avrgcccpp.compiler.optimization.level>Optimize for size (-Os)</avrgcccpp.compiler.optimization.level>
+  <avrgcccpp.compiler.optimization.PackStructureMembers>True</avrgcccpp.compiler.optimization.PackStructureMembers>
+  <avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcccpp.compiler.warnings.AllWarnings>True</avrgcccpp.compiler.warnings.AllWarnings>
+  <avrgcccpp.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </avrgcccpp.linker.libraries.Libraries>
+  <avrgcccpp.assembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\Atmel\ATmega_DFP\1.2.272\include</Value>
+    </ListValues>
+  </avrgcccpp.assembler.general.IncludePaths>
+</AvrGccCpp>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGccCpp>
+  <avrgcc.common.Device>-mmcu=atmega328p -B "%24(PackRepoDir)\Atmel\ATmega_DFP\1.2.272\gcc\dev\atmega328p"</avrgcc.common.Device>
+  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+  <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+  <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+  <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+  <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+  <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>DEBUG</Value>
+    </ListValues>
+  </avrgcc.compiler.symbols.DefSymbols>
+  <avrgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\Atmel\ATmega_DFP\1.2.272\include</Value>
+    </ListValues>
+  </avrgcc.compiler.directories.IncludePaths>
+  <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+  <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+  <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+  <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+  <avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcccpp.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>DEBUG</Value>
+    </ListValues>
+  </avrgcccpp.compiler.symbols.DefSymbols>
+  <avrgcccpp.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\Atmel\ATmega_DFP\1.2.272\include</Value>
+    </ListValues>
+  </avrgcccpp.compiler.directories.IncludePaths>
+  <avrgcccpp.compiler.optimization.level>Optimize (-O1)</avrgcccpp.compiler.optimization.level>
+  <avrgcccpp.compiler.optimization.PackStructureMembers>True</avrgcccpp.compiler.optimization.PackStructureMembers>
+  <avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcccpp.compiler.optimization.DebugLevel>Default (-g2)</avrgcccpp.compiler.optimization.DebugLevel>
+  <avrgcccpp.compiler.warnings.AllWarnings>True</avrgcccpp.compiler.warnings.AllWarnings>
+  <avrgcccpp.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </avrgcccpp.linker.libraries.Libraries>
+  <avrgcccpp.assembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\Atmel\ATmega_DFP\1.2.272\include</Value>
+    </ListValues>
+  </avrgcccpp.assembler.general.IncludePaths>
+  <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
+</AvrGccCpp>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="board.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="clib\ringbuffer.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="clib\ringbuffer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\BH1750\BH1750.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\BH1750\BH1750.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\BME280\BME280.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\BME280\BME280.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\BMP180\BMP180.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\BMP180\BMP180.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\CC1101\CC1101_Intertechno.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\CC1101\CC1101_Intertechno.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\CC1101\CC1101_Main.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\CC1101\CC1101_Main.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\CC1101\CC1101_Packet.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\CC1101\CC1101_RFSensorPacket.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\CC1101\CC1101_RFSensorPacket.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\CC1101\CC1101_Settings.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\CC1101\CC1101_Settings.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\DHT22\DHT22.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\DHT22\DHT22.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\DS18S20\DS18S20.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\DS18S20\DS18S20.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\DS2401\ds2401.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\DS2401\ds2401.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\FerrarisCounter\FerrarisCounter.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\FerrarisCounter\FerrarisCounter.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\help\Helper.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\help\Helper.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\help\text_de.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\OneWireDevices\onewiredevices.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\OneWireDevices\onewiredevices.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\panstamp\calibration.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\panstamp\calibration.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\panstamp\cc1101.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\panstamp\cc1101.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\panstamp\ccpacket.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\panstamp\commonregs.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\panstamp\config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\panstamp\nvolat.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\panstamp\panstamp.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\panstamp\panstamp.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\panstamp\register.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\panstamp\register.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\panstamp\repeater.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\panstamp\repeater.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\panstamp\spi.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\panstamp\spi.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\panstamp\swcommand.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\panstamp\swcommand.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\panstamp\swpacket.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\panstamp\swpacket.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\panstamp\swquery.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\panstamp\swquery.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\panstamp\swstatus.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\panstamp\swstatus.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\TFT\cTFT.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\TFT\cTFT.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\USBInterface\Serial.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\USBInterface\Serial.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\USBInterface\USBIfc.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\USBInterface\USBIfc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\Ventus\Analyse2.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\Ventus\Analyse2.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\Ventus\AnalyseProtokoll.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\Ventus\AnalyseProtokoll.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\Ventus\VentusW132.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cpplib\Ventus\VentusW132.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="main.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpplib\panstamp\COPYING">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="cpplib\panstamp\keywords.txt">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="cpplib\panstamp\RELEASES.txt">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="todo.txt">
+      <SubType>compile</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="clib" />
+    <Folder Include="cpplib" />
+    <Folder Include="cpplib\BH1750" />
+    <Folder Include="cpplib\BME280" />
+    <Folder Include="cpplib\BMP180" />
+    <Folder Include="cpplib\CC1101" />
+    <Folder Include="cpplib\DHT22" />
+    <Folder Include="cpplib\DS18S20" />
+    <Folder Include="cpplib\DS2401" />
+    <Folder Include="cpplib\DS2438" />
+    <Folder Include="cpplib\FerrarisCounter" />
+    <Folder Include="cpplib\help" />
+    <Folder Include="cpplib\Ventus" />
+    <Folder Include="cpplib\USBInterface" />
+    <Folder Include="cpplib\TFT" />
+    <Folder Include="cpplib\panstamp" />
+    <Folder Include="cpplib\OneWireDevices" />
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>
