@@ -98,64 +98,190 @@
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <ToolchainSettings>
       <AvrGccCpp>
-        <avrgcc.common.Device>-mmcu=atmega328p -B "%24(PackRepoDir)\Atmel\ATmega_DFP\1.2.272\gcc\dev\atmega328p"</avrgcc.common.Device>
-        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
-        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
-        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
-        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
-        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
-        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
-        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
-        <avrgcc.compiler.symbols.DefSymbols>
-          <ListValues>
-            <Value>DEBUG</Value>
-          </ListValues>
-        </avrgcc.compiler.symbols.DefSymbols>
-        <avrgcc.compiler.directories.IncludePaths>
-          <ListValues>
-            <Value>%24(PackRepoDir)\Atmel\ATmega_DFP\1.2.272\include</Value>
-          </ListValues>
-        </avrgcc.compiler.directories.IncludePaths>
-        <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
-        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
-        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
-        <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
-        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
-        <avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>
-        <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
-        <avrgcccpp.compiler.symbols.DefSymbols>
-          <ListValues>
-            <Value>DEBUG</Value>
-          </ListValues>
-        </avrgcccpp.compiler.symbols.DefSymbols>
-        <avrgcccpp.compiler.directories.IncludePaths>
-          <ListValues>
-            <Value>%24(PackRepoDir)\Atmel\ATmega_DFP\1.2.272\include</Value>
-          </ListValues>
-        </avrgcccpp.compiler.directories.IncludePaths>
-        <avrgcccpp.compiler.optimization.level>Optimize (-O1)</avrgcccpp.compiler.optimization.level>
-        <avrgcccpp.compiler.optimization.PackStructureMembers>True</avrgcccpp.compiler.optimization.PackStructureMembers>
-        <avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>
-        <avrgcccpp.compiler.optimization.DebugLevel>Default (-g2)</avrgcccpp.compiler.optimization.DebugLevel>
-        <avrgcccpp.compiler.warnings.AllWarnings>True</avrgcccpp.compiler.warnings.AllWarnings>
-        <avrgcccpp.linker.libraries.Libraries>
-          <ListValues>
-            <Value>libm</Value>
-          </ListValues>
-        </avrgcccpp.linker.libraries.Libraries>
-        <avrgcccpp.assembler.general.IncludePaths>
-          <ListValues>
-            <Value>%24(PackRepoDir)\Atmel\ATmega_DFP\1.2.272\include</Value>
-          </ListValues>
-        </avrgcccpp.assembler.general.IncludePaths>
-        <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
-      </AvrGccCpp>
+  <avrgcc.common.Device>-mmcu=atmega328p -B "%24(PackRepoDir)\Atmel\ATmega_DFP\1.2.272\gcc\dev\atmega328p"</avrgcc.common.Device>
+  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+  <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+  <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+  <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+  <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+  <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>DEBUG</Value>
+      <Value>ARDUINO=100</Value>
+      <Value>F_CPU=16000000L</Value>
+      <Value>ARDUINO_NANO</Value>
+      <Value>HasCC1101</Value>
+      <Value>WithCC1101Logging</Value>
+      <Value>HasOneWireDevices</Value>
+      <Value>IsZentrale</Value>
+    </ListValues>
+  </avrgcc.compiler.symbols.DefSymbols>
+  <avrgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\Atmel\ATmega_DFP\1.2.272\include</Value>
+      <Value>../../ArduinoLibs/Arduino/avr/cores/arduino</Value>
+      <Value>../../ArduinoLibs/Arduino/avr/libraries/SPI/src</Value>
+      <Value>../../ArduinoLibs/Arduino/avr/libraries/SoftwareSerial/src</Value>
+      <Value>../../ArduinoLibs/Arduino/avr/libraries/EEPROM/src</Value>
+      <Value>../../ArduinoLibs/Arduino/avr/libraries/Wire/src</Value>
+      <Value>../../ArduinoLibs/Arduino/avr/libraries/Wire/src/utility</Value>
+      <Value>../../ArduinoLibs/Adafruit-GFX-Library</Value>
+      <Value>../../ArduinoLibs/Adafruit-ST7735-Library</Value>
+      <Value>../../ArduinoLibs/OneWire</Value>
+      <Value>../../ArduinoLibs/SdFat/src</Value>
+      <Value>../../ArduinoLibs/Arduino/avr/variants/standard</Value>
+    </ListValues>
+  </avrgcc.compiler.directories.IncludePaths>
+  <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+  <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+  <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+  <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+  <avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcccpp.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>DEBUG</Value>
+      <Value>ARDUINO=100</Value>
+      <Value>F_CPU=16000000L</Value>
+      <Value>ARDUINO_NANO</Value>
+      <Value>HasCC1101</Value>
+      <Value>WithCC1101Logging</Value>
+      <Value>HasOneWireDevices</Value>
+      <Value>IsZentrale</Value>
+    </ListValues>
+  </avrgcccpp.compiler.symbols.DefSymbols>
+  <avrgcccpp.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\Atmel\ATmega_DFP\1.2.272\include</Value>
+      <Value>../../ArduinoLibs/Arduino/avr/cores/arduino</Value>
+      <Value>../../ArduinoLibs/Arduino/avr/libraries/SPI/src</Value>
+      <Value>../../ArduinoLibs/Arduino/avr/libraries/SoftwareSerial/src</Value>
+      <Value>../../ArduinoLibs/Arduino/avr/libraries/EEPROM/src</Value>
+      <Value>../../ArduinoLibs/Arduino/avr/libraries/Wire/src</Value>
+      <Value>../../ArduinoLibs/Arduino/avr/libraries/Wire/src/utility</Value>
+      <Value>../../ArduinoLibs/Adafruit-GFX-Library</Value>
+      <Value>../../ArduinoLibs/Adafruit-ST7735-Library</Value>
+      <Value>../../ArduinoLibs/OneWire</Value>
+      <Value>../../ArduinoLibs/SdFat/src</Value>
+      <Value>../../ArduinoLibs/Arduino/avr/variants/standard</Value>
+    </ListValues>
+  </avrgcccpp.compiler.directories.IncludePaths>
+  <avrgcccpp.compiler.optimization.level>Optimize (-O1)</avrgcccpp.compiler.optimization.level>
+  <avrgcccpp.compiler.optimization.PackStructureMembers>True</avrgcccpp.compiler.optimization.PackStructureMembers>
+  <avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcccpp.compiler.optimization.DebugLevel>Default (-g2)</avrgcccpp.compiler.optimization.DebugLevel>
+  <avrgcccpp.compiler.warnings.AllWarnings>True</avrgcccpp.compiler.warnings.AllWarnings>
+  <avrgcccpp.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </avrgcccpp.linker.libraries.Libraries>
+  <avrgcccpp.assembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\Atmel\ATmega_DFP\1.2.272\include</Value>
+    </ListValues>
+  </avrgcccpp.assembler.general.IncludePaths>
+  <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
+</AvrGccCpp>
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
     <None Include="todo.txt">
       <SubType>compile</SubType>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\ArduinoLibs\hooks.c">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\hooks.c</Link>
+    </Compile>
+    <Compile Include="..\Lib\board.h">
+      <SubType>compile</SubType>
+      <Link>board.h</Link>
+    </Compile>
+    <Compile Include="..\Lib\cppLib\CC1101\CC1101_Intertechno.cpp">
+      <SubType>compile</SubType>
+      <Link>cpplib\CC1101\CC1101_Intertechno.cpp</Link>
+    </Compile>
+    <Compile Include="..\Lib\cppLib\CC1101\CC1101_Intertechno.h">
+      <SubType>compile</SubType>
+      <Link>cpplib\CC1101\CC1101_Intertechno.h</Link>
+    </Compile>
+    <Compile Include="..\Lib\cppLib\CC1101\CC1101_Main.cpp">
+      <SubType>compile</SubType>
+      <Link>cpplib\CC1101\CC1101_Main.cpp</Link>
+    </Compile>
+    <Compile Include="..\Lib\cppLib\CC1101\CC1101_Main.h">
+      <SubType>compile</SubType>
+      <Link>cpplib\CC1101\CC1101_Main.h</Link>
+    </Compile>
+    <Compile Include="..\Lib\cppLib\CC1101\CC1101_Packet.h">
+      <SubType>compile</SubType>
+      <Link>cpplib\CC1101\CC1101_Packet.h</Link>
+    </Compile>
+    <Compile Include="..\Lib\cppLib\CC1101\CC1101_RFSensorPacket.cpp">
+      <SubType>compile</SubType>
+      <Link>cpplib\CC1101\CC1101_RFSensorPacket.cpp</Link>
+    </Compile>
+    <Compile Include="..\Lib\cppLib\CC1101\CC1101_RFSensorPacket.h">
+      <SubType>compile</SubType>
+      <Link>cpplib\CC1101\CC1101_RFSensorPacket.h</Link>
+    </Compile>
+    <Compile Include="..\Lib\cppLib\CC1101\CC1101_Settings.cpp">
+      <SubType>compile</SubType>
+      <Link>cpplib\CC1101\CC1101_Settings.cpp</Link>
+    </Compile>
+    <Compile Include="..\Lib\cppLib\CC1101\CC1101_Settings.h">
+      <SubType>compile</SubType>
+      <Link>cpplib\CC1101\CC1101_Settings.h</Link>
+    </Compile>
+    <Compile Include="..\Lib\cppLib\debug\Debug.cpp">
+      <SubType>compile</SubType>
+      <Link>cpplib\debug\Debug.cpp</Link>
+    </Compile>
+    <Compile Include="..\Lib\cppLib\debug\Debug.h">
+      <SubType>compile</SubType>
+      <Link>cpplib\debug\Debug.h</Link>
+    </Compile>
+    <Compile Include="..\Lib\cppLib\OneWireDevices\onewiredevices.cpp">
+      <SubType>compile</SubType>
+      <Link>cpplib\onewiredevices\onewiredevices.cpp</Link>
+    </Compile>
+    <Compile Include="..\Lib\cppLib\OneWireDevices\onewiredevices.h">
+      <SubType>compile</SubType>
+      <Link>cpplib\onewiredevices\onewiredevices.h</Link>
+    </Compile>
+    <Compile Include="..\Lib\cppLib\USBInterface\Serial.cpp">
+      <SubType>compile</SubType>
+      <Link>cpplib\USBInterface\Serial.cpp</Link>
+    </Compile>
+    <Compile Include="..\Lib\cppLib\USBInterface\Serial.h">
+      <SubType>compile</SubType>
+      <Link>cpplib\USBInterface\Serial.h</Link>
+    </Compile>
+    <Compile Include="..\Lib\cppLib\USBInterface\USBIfc.cpp">
+      <SubType>compile</SubType>
+      <Link>cpplib\USBInterface\USBIfc.cpp</Link>
+    </Compile>
+    <Compile Include="..\Lib\cppLib\USBInterface\USBIfc.h">
+      <SubType>compile</SubType>
+      <Link>cpplib\USBInterface\USBIfc.h</Link>
+    </Compile>
+    <Compile Include="..\Lib\main.cpp">
+      <SubType>compile</SubType>
+      <Link>main.cpp</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ArduinoLibs" />
+    <Folder Include="cpplib" />
+    <Folder Include="cpplib\CC1101" />
+    <Folder Include="cpplib\debug" />
+    <Folder Include="cpplib\onewiredevices" />
+    <Folder Include="cpplib\USBInterface" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
 </Project>

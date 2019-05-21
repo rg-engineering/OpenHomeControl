@@ -4,3 +4,6 @@
 /Lib/Lib.componentinfo.xml
 /Receiver/Receiver.componentinfo.xml
 /Sensor/Sensor.componentinfo.xml
+*.d
+*.o
+/Receiver/Debug/
