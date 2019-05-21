@@ -98,61 +98,421 @@
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <ToolchainSettings>
       <AvrGccCpp>
-        <avrgcc.common.Device>-mmcu=atmega644 -B "%24(PackRepoDir)\Atmel\ATmega_DFP\1.2.272\gcc\dev\atmega644"</avrgcc.common.Device>
-        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
-        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
-        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
-        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
-        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
-        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
-        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
-        <avrgcc.compiler.symbols.DefSymbols>
-          <ListValues>
-            <Value>DEBUG</Value>
-          </ListValues>
-        </avrgcc.compiler.symbols.DefSymbols>
-        <avrgcc.compiler.directories.IncludePaths>
-          <ListValues>
-            <Value>%24(PackRepoDir)\Atmel\ATmega_DFP\1.2.272\include</Value>
-          </ListValues>
-        </avrgcc.compiler.directories.IncludePaths>
-        <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
-        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
-        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
-        <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
-        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
-        <avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>
-        <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
-        <avrgcccpp.compiler.symbols.DefSymbols>
-          <ListValues>
-            <Value>DEBUG</Value>
-          </ListValues>
-        </avrgcccpp.compiler.symbols.DefSymbols>
-        <avrgcccpp.compiler.directories.IncludePaths>
-          <ListValues>
-            <Value>%24(PackRepoDir)\Atmel\ATmega_DFP\1.2.272\include</Value>
-          </ListValues>
-        </avrgcccpp.compiler.directories.IncludePaths>
-        <avrgcccpp.compiler.optimization.level>Optimize (-O1)</avrgcccpp.compiler.optimization.level>
-        <avrgcccpp.compiler.optimization.PackStructureMembers>True</avrgcccpp.compiler.optimization.PackStructureMembers>
-        <avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>
-        <avrgcccpp.compiler.optimization.DebugLevel>Default (-g2)</avrgcccpp.compiler.optimization.DebugLevel>
-        <avrgcccpp.compiler.warnings.AllWarnings>True</avrgcccpp.compiler.warnings.AllWarnings>
-        <avrgcccpp.linker.libraries.Libraries>
-          <ListValues>
-            <Value>libm</Value>
-          </ListValues>
-        </avrgcccpp.linker.libraries.Libraries>
-        <avrgcccpp.assembler.general.IncludePaths>
-          <ListValues>
-            <Value>%24(PackRepoDir)\Atmel\ATmega_DFP\1.2.272\include</Value>
-          </ListValues>
-        </avrgcccpp.assembler.general.IncludePaths>
-        <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
-      </AvrGccCpp>
+  <avrgcc.common.Device>-mmcu=atmega644 -B "%24(PackRepoDir)\Atmel\ATmega_DFP\1.2.272\gcc\dev\atmega644"</avrgcc.common.Device>
+  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+  <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+  <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+  <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+  <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+  <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>aaaUSE_OLD_TFT_PCB</Value>
+      <Value>ARDUINO=100</Value>
+      <Value>F_CPU=16000000L</Value>
+      <Value>HasCC1101</Value>
+      <Value>HasOneWireDevices</Value>
+      <Value>ATMEGA644</Value>
+      <Value>ARDUINO_NANO</Value>
+      <Value>HAS_TFT</Value>
+      <Value>HAS_TFT_ST7735</Value>
+      <Value>HAS_SDCARD</Value>
+      <Value>DEBUG</Value>
+      <Value>DISPLAY_xxxPRESSURE</Value>
+      <Value>DISPLAY_HUMIDITY</Value>
+      <Value>DISPLAY_POP</Value>
+      <Value>xxxHasBME280</Value>
+      <Value>WithCC1101Logging</Value>
+    </ListValues>
+  </avrgcc.compiler.symbols.DefSymbols>
+  <avrgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\Atmel\ATmega_DFP\1.2.272\include</Value>
+      <Value>../../ArduinoLibs/Arduino/avr/cores/arduino</Value>
+      <Value>../../ArduinoLibs/Arduino/avr/libraries/SPI/src</Value>
+      <Value>../../ArduinoLibs/Arduino/avr/libraries/SoftwareSerial/src</Value>
+      <Value>../../ArduinoLibs/Arduino/avr/libraries/EEPROM/src</Value>
+      <Value>../../ArduinoLibs/Arduino/avr/libraries/Wire/src</Value>
+      <Value>../../ArduinoLibs/Arduino/avr/libraries/Wire/src/utility</Value>
+      <Value>../../ArduinoLibs/Adafruit-GFX-Library</Value>
+      <Value>../../ArduinoLibs/Adafruit-ST7735-Library</Value>
+      <Value>../../ArduinoLibs/OneWire</Value>
+      <Value>../../ArduinoLibs/SdFat/src</Value>
+      <Value>..</Value>
+    </ListValues>
+  </avrgcc.compiler.directories.IncludePaths>
+  <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+  <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+  <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+  <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+  <avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcccpp.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>aaaUSE_OLD_TFT_PCB</Value>
+      <Value>ARDUINO=100</Value>
+      <Value>F_CPU=16000000L</Value>
+      <Value>HasCC1101</Value>
+      <Value>HasOneWireDevices</Value>
+      <Value>ATMEGA644</Value>
+      <Value>ARDUINO_NANO</Value>
+      <Value>HAS_TFT</Value>
+      <Value>HAS_TFT_ST7735</Value>
+      <Value>HAS_SDCARD</Value>
+      <Value>DEBUG</Value>
+      <Value>DISPLAY_xxxPRESSURE</Value>
+      <Value>DISPLAY_HUMIDITY</Value>
+      <Value>DISPLAY_POP</Value>
+      <Value>xxxHasBME280</Value>
+      <Value>WithCC1101Logging</Value>
+    </ListValues>
+  </avrgcccpp.compiler.symbols.DefSymbols>
+  <avrgcccpp.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>../../ArduinoLibs/Arduino/avr/libraries/SoftwareSerial/src</Value>
+      <Value>../../ArduinoLibs/Arduino/avr/libraries/EEPROM/src</Value>
+      <Value>../../ArduinoLibs/Arduino/avr/libraries/Wire/src</Value>
+      <Value>../../ArduinoLibs/Arduino/avr/libraries/Wire/src/utility</Value>
+      <Value>../../ArduinoLibs/Adafruit-GFX-Library</Value>
+      <Value>../../ArduinoLibs/Adafruit-ST7735-Library</Value>
+      <Value>../../ArduinoLibs/OneWire</Value>
+      <Value>../../ArduinoLibs/SdFat/src</Value>
+      <Value>%24(PackRepoDir)\Atmel\ATmega_DFP\1.2.272\include</Value>
+      <Value>../../ArduinoLibs/Arduino/avr/cores/arduino</Value>
+      <Value>../../ArduinoLibs/Arduino/avr/libraries/SPI/src</Value>
+      <Value>..</Value>
+    </ListValues>
+  </avrgcccpp.compiler.directories.IncludePaths>
+  <avrgcccpp.compiler.optimization.level>Optimize (-O1)</avrgcccpp.compiler.optimization.level>
+  <avrgcccpp.compiler.optimization.PackStructureMembers>True</avrgcccpp.compiler.optimization.PackStructureMembers>
+  <avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcccpp.compiler.optimization.DebugLevel>Default (-g2)</avrgcccpp.compiler.optimization.DebugLevel>
+  <avrgcccpp.compiler.warnings.AllWarnings>True</avrgcccpp.compiler.warnings.AllWarnings>
+  <avrgcccpp.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </avrgcccpp.linker.libraries.Libraries>
+  <avrgcccpp.assembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\Atmel\ATmega_DFP\1.2.272\include</Value>
+    </ListValues>
+  </avrgcccpp.assembler.general.IncludePaths>
+  <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
+</AvrGccCpp>
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="..\ArduinoLibs\Adafruit-GFX-Library\Adafruit_GFX.cpp">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\Adafruit-GFX-Library\Adafruit_GFX.cpp</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\Adafruit-GFX-Library\Adafruit_GFX.h">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\Adafruit-GFX-Library\Adafruit_GFX.h</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\Adafruit-GFX-Library\Adafruit_SPITFT.cpp">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\Adafruit-GFX-Library\Adafruit_SPITFT.cpp</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\Adafruit-GFX-Library\Adafruit_SPITFT.h">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\Adafruit-GFX-Library\Adafruit_SPITFT.h</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\Adafruit-GFX-Library\Adafruit_SPITFT_Macros.h">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\Adafruit-GFX-Library\Adafruit_SPITFT_Macros.h</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\Adafruit-GFX-Library\gfxfont.h">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\Adafruit-GFX-Library\gfxfont.h</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\Adafruit-GFX-Library\glcdfont.c">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\Adafruit-GFX-Library\glcdfont.c</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\Adafruit-ST7735-Library\Adafruit_ST7735.cpp">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\Adafruit-ST7735-Library\Adafruit_ST7735.cpp</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\Adafruit-ST7735-Library\Adafruit_ST7735.h">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\Adafruit-ST7735-Library\Adafruit_ST7735.h</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\Adafruit-ST7735-Library\Adafruit_ST7789.cpp">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\Adafruit-ST7735-Library\Adafruit_ST7789.cpp</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\Adafruit-ST7735-Library\Adafruit_ST7789.h">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\Adafruit-ST7735-Library\Adafruit_ST7789.h</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\Adafruit-ST7735-Library\Adafruit_ST77xx.cpp">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\Adafruit-ST7735-Library\Adafruit_ST77xx.cpp</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\Adafruit-ST7735-Library\Adafruit_ST77xx.h">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\Adafruit-ST7735-Library\Adafruit_ST77xx.h</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\Arduino\avr\libraries\SoftwareSerial\src\SoftwareSerial.cpp">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\SoftwareSerial\SoftwareSerial.cpp</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\hooks.c">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\hooks.c</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\SdFat\src\BlockDriver.h">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\SDFat\BlockDriver.h</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\SdFat\src\FatLib\ArduinoFiles.h">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\SDFat\FatLib\ArduinoFiles.h</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\SdFat\src\FatLib\ArduinoStream.h">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\SDFat\FatLib\ArduinoStream.h</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\SdFat\src\FatLib\BaseBlockDriver.h">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\SDFat\FatLib\BaseBlockDriver.h</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\SdFat\src\FatLib\bufstream.h">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\SDFat\FatLib\bufstream.h</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\SdFat\src\FatLib\FatApiConstants.h">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\SDFat\FatLib\FatApiConstants.h</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\SdFat\src\FatLib\FatFile.cpp">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\SDFat\FatLib\FatFile.cpp</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\SdFat\src\FatLib\FatFile.h">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\SDFat\FatLib\FatFile.h</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\SdFat\src\FatLib\FatFileLFN.cpp">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\SDFat\FatLib\FatFileLFN.cpp</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\SdFat\src\FatLib\FatFilePrint.cpp">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\SDFat\FatLib\FatFilePrint.cpp</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\SdFat\src\FatLib\FatFileSFN.cpp">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\SDFat\FatLib\FatFileSFN.cpp</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\SdFat\src\FatLib\FatFileSystem.h">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\SDFat\FatLib\FatFileSystem.h</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\SdFat\src\FatLib\FatLib.h">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\SDFat\FatLib\FatLib.h</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\SdFat\src\FatLib\FatLibConfig.h">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\SDFat\FatLib\FatLibConfig.h</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\SdFat\src\FatLib\FatStructs.h">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\SDFat\FatLib\FatStructs.h</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\SdFat\src\FatLib\FatVolume.cpp">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\SDFat\FatLib\FatVolume.cpp</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\SdFat\src\FatLib\FatVolume.h">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\SDFat\FatLib\FatVolume.h</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\SdFat\src\FatLib\FmtNumber.cpp">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\SDFat\FatLib\FmtNumber.cpp</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\SdFat\src\FatLib\FmtNumber.h">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\SDFat\FatLib\FmtNumber.h</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\SdFat\src\FatLib\fstream.cpp">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\SDFat\FatLib\fstream.cpp</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\SdFat\src\FatLib\fstream.h">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\SDFat\FatLib\fstream.h</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\SdFat\src\FatLib\ios.h">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\SDFat\FatLib\ios.h</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\SdFat\src\FatLib\iostream.h">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\SDFat\FatLib\iostream.h</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\SdFat\src\FatLib\istream.cpp">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\SDFat\FatLib\istream.cpp</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\SdFat\src\FatLib\istream.h">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\SDFat\FatLib\istream.h</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\SdFat\src\FatLib\ostream.cpp">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\SDFat\FatLib\ostream.cpp</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\SdFat\src\FatLib\ostream.h">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\SDFat\FatLib\ostream.h</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\SdFat\src\FatLib\StdioStream.cpp">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\SDFat\FatLib\StdioStream.cpp</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\SdFat\src\FatLib\StdioStream.h">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\SDFat\FatLib\StdioStream.h</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\SdFat\src\FreeStack.h">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\SDFat\FreeStack.h</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\SdFat\src\MinimumSerial.cpp">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\SDFat\MinimumSerial.cpp</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\SdFat\src\MinimumSerial.h">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\SDFat\MinimumSerial.h</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\SdFat\src\SdCard\SdInfo.h">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\SDFat\SDCard\SdInfo.h</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\SdFat\src\SdCard\SdioCard.h">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\SDFat\SDCard\SdioCard.h</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\SdFat\src\SdCard\SdioCardEX.cpp">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\SDFat\SDCard\SdioCardEX.cpp</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\SdFat\src\SdCard\SdioTeensy.cpp">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\SDFat\SDCard\SdioTeensy.cpp</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\SdFat\src\SdCard\SdSpiCard.cpp">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\SDFat\SDCard\SdSpiCard.cpp</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\SdFat\src\SdCard\SdSpiCard.h">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\SDFat\SDCard\SdSpiCard.h</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\SdFat\src\SdCard\SdSpiCardEX.cpp">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\SDFat\SDCard\SdSpiCardEX.cpp</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\SdFat\src\SdFat.h">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\SDFat\SdFat.h</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\SdFat\src\SdFatConfig.h">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\SDFat\SdFatConfig.h</Link>
+    </Compile>
+    <Compile Include="..\ArduinoLibs\SdFat\src\SysCall.h">
+      <SubType>compile</SubType>
+      <Link>ArduinoLibs\SDFat\SysCall.h</Link>
+    </Compile>
+    <Compile Include="..\Lib\board.h">
+      <SubType>compile</SubType>
+      <Link>board.h</Link>
+    </Compile>
+    <Compile Include="..\Lib\cppLib\BME280\BME280.cpp">
+      <SubType>compile</SubType>
+      <Link>cpplib\BME280\BME280.cpp</Link>
+    </Compile>
+    <Compile Include="..\Lib\cppLib\BME280\BME280.h">
+      <SubType>compile</SubType>
+      <Link>cpplib\BME280\BME280.h</Link>
+    </Compile>
+    <Compile Include="..\Lib\cppLib\CC1101\CC1101_Intertechno.cpp">
+      <SubType>compile</SubType>
+      <Link>cpplib\CC1101\CC1101_Intertechno.cpp</Link>
+    </Compile>
+    <Compile Include="..\Lib\cppLib\CC1101\CC1101_Intertechno.h">
+      <SubType>compile</SubType>
+      <Link>cpplib\CC1101\CC1101_Intertechno.h</Link>
+    </Compile>
+    <Compile Include="..\Lib\cppLib\CC1101\CC1101_Main.cpp">
+      <SubType>compile</SubType>
+      <Link>cpplib\CC1101\CC1101_Main.cpp</Link>
+    </Compile>
+    <Compile Include="..\Lib\cppLib\CC1101\CC1101_Main.h">
+      <SubType>compile</SubType>
+      <Link>cpplib\CC1101\CC1101_Main.h</Link>
+    </Compile>
+    <Compile Include="..\Lib\cppLib\CC1101\CC1101_Packet.h">
+      <SubType>compile</SubType>
+      <Link>cpplib\CC1101\CC1101_Packet.h</Link>
+    </Compile>
+    <Compile Include="..\Lib\cppLib\CC1101\CC1101_RFSensorPacket.cpp">
+      <SubType>compile</SubType>
+      <Link>cpplib\CC1101\CC1101_RFSensorPacket.cpp</Link>
+    </Compile>
+    <Compile Include="..\Lib\cppLib\CC1101\CC1101_RFSensorPacket.h">
+      <SubType>compile</SubType>
+      <Link>cpplib\CC1101\CC1101_RFSensorPacket.h</Link>
+    </Compile>
+    <Compile Include="..\Lib\cppLib\CC1101\CC1101_Settings.cpp">
+      <SubType>compile</SubType>
+      <Link>cpplib\CC1101\CC1101_Settings.cpp</Link>
+    </Compile>
+    <Compile Include="..\Lib\cppLib\CC1101\CC1101_Settings.h">
+      <SubType>compile</SubType>
+      <Link>cpplib\CC1101\CC1101_Settings.h</Link>
+    </Compile>
+    <Compile Include="..\Lib\cppLib\OneWireDevices\onewiredevices.cpp">
+      <SubType>compile</SubType>
+      <Link>cpplib\onewiredevices\onewiredevices.cpp</Link>
+    </Compile>
+    <Compile Include="..\Lib\cppLib\OneWireDevices\onewiredevices.h">
+      <SubType>compile</SubType>
+      <Link>cpplib\onewiredevices\onewiredevices.h</Link>
+    </Compile>
+    <Compile Include="..\Lib\cppLib\TFT\cTFT.cpp">
+      <SubType>compile</SubType>
+      <Link>cpplib\TFT\cTFT.cpp</Link>
+    </Compile>
+    <Compile Include="..\Lib\cppLib\TFT\cTFT.h">
+      <SubType>compile</SubType>
+      <Link>cpplib\TFT\cTFT.h</Link>
+    </Compile>
+    <Compile Include="..\Lib\cppLib\USBInterface\Serial.cpp">
+      <SubType>compile</SubType>
+      <Link>cpplib\USBInterface\Serial.cpp</Link>
+    </Compile>
+    <Compile Include="..\Lib\cppLib\USBInterface\Serial.h">
+      <SubType>compile</SubType>
+      <Link>cpplib\USBInterface\Serial.h</Link>
+    </Compile>
+    <Compile Include="..\Lib\cppLib\USBInterface\USBIfc.cpp">
+      <SubType>compile</SubType>
+      <Link>cpplib\USBInterface\USBIfc.cpp</Link>
+    </Compile>
+    <Compile Include="..\Lib\cppLib\USBInterface\USBIfc.h">
+      <SubType>compile</SubType>
+      <Link>cpplib\USBInterface\USBIfc.h</Link>
+    </Compile>
     <Compile Include="main.cpp">
       <SubType>compile</SubType>
     </Compile>
@@ -164,6 +524,21 @@
     <None Include="todo.txt">
       <SubType>compile</SubType>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ArduinoLibs" />
+    <Folder Include="ArduinoLibs\Adafruit-GFX-Library" />
+    <Folder Include="ArduinoLibs\Adafruit-ST7735-Library" />
+    <Folder Include="ArduinoLibs\SoftwareSerial" />
+    <Folder Include="ArduinoLibs\SDFat" />
+    <Folder Include="ArduinoLibs\SDFat\FatLib" />
+    <Folder Include="ArduinoLibs\SDFat\SDCard" />
+    <Folder Include="cpplib" />
+    <Folder Include="cpplib\BME280" />
+    <Folder Include="cpplib\CC1101" />
+    <Folder Include="cpplib\USBInterface" />
+    <Folder Include="cpplib\TFT" />
+    <Folder Include="cpplib\onewiredevices" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
 </Project>
