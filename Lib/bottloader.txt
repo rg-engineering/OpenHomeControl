@@ -1,0 +1,10 @@
+
+avrdude -p m644p -c USBasp -P USB -e -Ulock:w:0x3F:m -Uefuse:w:0x05:m -Uhfuse:w:0xDA:m -Ulfuse:w:0xFF:m -B4
+avrdude -p m644p -c USBasp -P USB -U lfuse:r:-:i -v
+avrdude -p m328p -c USBasp -P USB -e -Ulock:w:0x3F:m -Uefuse:w:0x05:m -Uhfuse:w:0xDE:m -Ulfuse:w:0xFF:m -B4
+avrdude -p m328p -c USBasp -P USB -e -Uflash:w:"D:\Software\Arduino\GeneralRFSensor4Nano\Release\GeneralRFSensor4Nano.hex":i
+avrdude -p m328p -c USBasp -P USB -e -Uflash:w:"D:\Software\Arduino\GeneralRFSensor4Nano\Debug\GeneralRFSensor4Nano.hex":i
+avrdude -c USBasp -P USB -p m644p -n -v
+avrdude -c USBasp -p m644p -U lfuse:w:0xFF:m
+avrdude -c USBasp -p m644p -U hfuse:w:0xDE:m
+avrdude -c USBasp -p m644p -U efuse:w:0xFF:m //kein brownout
