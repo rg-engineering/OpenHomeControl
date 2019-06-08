@@ -84,20 +84,32 @@ void cBH1750::Init(byte I2Caddress)
 /*****************************************************************************************/
 int cBH1750::Read(int I2Caddress)
 {
+	//see issue #1 https://github.com/rg-engineering/OpenHomeControl/issues/1
+	int byteNumber = Wire.requestFrom(I2Caddress, 2);	// Request from I2Caddress 2 bytes
+	if(byteNumber==2)
+	{
+		buffer[0] = Wire.read();		// Read first byte into array
+		buffer[1] = Wire.read();		// Read second byte into array
+	}
+	return byteNumber;
+}
+/*
+int cBH1750::Read(int I2Caddress)
+{
 	//cDebug::Log(cDebug::LOG_D, "Read");
 	byte byteNumber = 0;
 	Wire.beginTransmission(I2Caddress);				// I2C address
 
-/*	if (nMode==1)
-	{
-		//Wire.write(0x01); //power on
-		Wire.write(0x20);								// Switch to H-Mode 1Lux resolution 120ms; one time
-		//Wire.write(0x21);								// Switch to H-Mode2 0,5Lux resolution; one time
-		//Wire.write(0x23);								// Switch to L-Mode 4 Lux resolution 16ms; one time
-
-		delay(180);
-
-	}*/
+//	if (nMode==1)
+//	{
+//		//Wire.write(0x01); //power on
+//		Wire.write(0x20);								// Switch to H-Mode 1Lux resolution 120ms; one time
+//		//Wire.write(0x21);								// Switch to H-Mode2 0,5Lux resolution; one time
+//		//Wire.write(0x23);								// Switch to L-Mode 4 Lux resolution 16ms; one time
+//
+//		delay(180);
+//
+//	}
 
 	
 	Wire.requestFrom(I2Caddress, 2);				// Request from I2Caddress 2 bytes
@@ -109,6 +121,7 @@ int cBH1750::Read(int I2Caddress)
 	Wire.endTransmission();
 	return byteNumber;
 }
+*/
 /*****************************************************************************************/
 
 #endif

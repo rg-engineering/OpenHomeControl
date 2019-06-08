@@ -211,7 +211,9 @@ char cBMP180::readBytes(unsigned char *values, char length)
 	if (_error == 0)
 	{
 		Wire.requestFrom(BMP180_I2CADDRESS,length);
-		while(Wire.available() != length) ; // wait until bytes are ready
+		
+		//not necessary? see issue #1 https://github.com/rg-engineering/OpenHomeControl/issues/1
+		//while(Wire.available() != length) ; // wait until bytes are ready
 		for(int x=0;x<length;x++)
 		{
 			values[x] = Wire.read();
